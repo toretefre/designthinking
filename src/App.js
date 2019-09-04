@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
+import { Router } from '@reach/router';
 import './App.css';
+
+const LandingPage = lazy(() => import('./containers/LandingPage'));
+const Survey = lazy(() => import('./containers/Survey'));
 
 export const App = () => {
   return (
-    <main>
-      <h1>Welcome to Easy Student Housing Trondheim</h1>
-      <a href="/survey">
-        <button>Find your perfect flat!</button>
-      </a>
-    </main>
+    <Suspense fallback={<h1>Loading...</h1>}>
+      <Router>
+        <LandingPage path="/" />
+        <Survey path="/survey" />
+      </Router>
+    </Suspense>
   );
 };
 
