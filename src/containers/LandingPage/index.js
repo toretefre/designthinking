@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from '@reach/router';
 
 export const LandingPage = () => {
   return (
     <main>
       <h1>Welcome to Easy Student Housing Trondheim</h1>
-      <a href="/survey">
+      <Link to="/survey">
         <button>Find your perfect flat!</button>
-      </a>
+      </Link>
     </main>
   );
 };

@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link } from '@reach/router';
 
 export const Survey = () => {
   return (
     <main>
       <h1>Survey</h1>
+      <h2>The more sliders to the right, the more affordable it gets!</h2>
       <form>
         Max distance to night life:{' '}
         <input type="range" name="points" min="0" max="5000" step="500" />
@@ -17,7 +19,7 @@ export const Survey = () => {
         What are the maximum number of people you could share a flat with?
         <input type="range" name="points" min="1" max="116" step="1" />
         <br />
-        <button type="submit">Find my perfect flat!</button>
+        <Link to="/recommendation">Find my perfect flat!</Link>
       </form>
     </main>
   );
