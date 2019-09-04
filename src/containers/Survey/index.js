@@ -19,7 +19,9 @@ export const Survey = () => {
         What are the maximum number of people you could share a flat with?
         <input type="range" name="points" min="1" max="116" step="1" />
         <br />
-        <Link to="/recommendation">Find my perfect flat!</Link>
+        <Link to="/recommendation">
+          <button>Find my perfect flat!</button>
+        </Link>
       </form>
     </main>
   );

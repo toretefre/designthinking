@@ -13,7 +13,9 @@ export const Recommendation = () => {
         />
       </section>
 
-      <Link to="/survey">Didnt like it, find me a new flat!</Link>
+      <Link to="/survey">
+        <button>Find me some other flat!</button>
+      </Link>
     </main>
   );
 };
