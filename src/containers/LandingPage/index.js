@@ -6,7 +6,7 @@ export const LandingPage = () => {
     <main>
       <h1>Welcome to Easy Student Housing Trondheim</h1>
       <Link to="/survey">
-        <button>Find your perfect flat!</button>
+        <button>Find my perfect flat!</button>
       </Link>
     </main>
   );

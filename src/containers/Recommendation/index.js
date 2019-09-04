@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from '@reach/router';
 
 export const Recommendation = () => {
   return (
@@ -11,6 +12,8 @@ export const Recommendation = () => {
           alt="Lerkendal studentby"
         />
       </section>
+
+      <Link to="/survey">Didnt like it, find me a new flat!</Link>
     </main>
   );
 };
