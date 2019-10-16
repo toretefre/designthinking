@@ -13,6 +13,7 @@ export const Application = () => {
       <h2>Please enter your personal information!</h2>
       <form>
         Given name: <input type="text" />
+        <br />
         Family name: <input type="text" />
         <Link to="/">
           <button>Apply</button>
