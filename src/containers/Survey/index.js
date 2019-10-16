@@ -16,6 +16,7 @@ export const Survey = () => {
         <input
           type="range"
           defaultValue={nightlife}
+          onChange={e => setNightlife(e.target.value)}
           name="points"
           min="0"
           max="5000"
@@ -27,6 +28,7 @@ export const Survey = () => {
         <input
           type="range"
           defaultValue={campus}
+          onChange={e => setCampus(e.target.value)}
           name="points"
           min="0"
           max="5000"
@@ -38,7 +40,7 @@ export const Survey = () => {
         <input
           type="range"
           defaultValue={downtown}
-          onChange={value => setDowntown(value)}
+          onChange={e => setDowntown(e.target.value)}
           name="points"
           min="0"
           max="5000"
@@ -50,7 +52,7 @@ export const Survey = () => {
         <input
           type="range"
           defaultValue={flatmates}
-          onChange={value => setFlatmates(value)}
+          onChange={e => setFlatmates(e.target.value)}
           name="points"
           min="1"
           max="116"
