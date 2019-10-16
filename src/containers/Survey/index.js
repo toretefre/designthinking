@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from '@reach/router';
+import './style.css';
 
 export const Survey = () => {
   const [nightlife, setNightlife] = useState(2000);
@@ -8,60 +9,65 @@ export const Survey = () => {
   const [flatmates, setFlatmates] = useState(115);
 
   return (
-    <main>
-      <h1>Survey</h1>
-      <h2>The more sliders to the right, the more affordable it gets!</h2>
-      <form>
-        Max distance to night life:{' '}
-        <input
-          type="range"
-          defaultValue={nightlife}
-          name="points"
-          min="0"
-          max="5000"
-          step="500"
-        />
-        <p>{nightlife} meters</p>
-        <br />
-        Max distance to campus:{' '}
-        <input
-          type="range"
-          defaultValue={campus}
-          name="points"
-          min="0"
-          max="5000"
-          step="500"
-        />
-        <p>{campus} meters</p>
-        <br />
-        Max distance to Trondheim Torg (downtown):{' '}
-        <input
-          type="range"
-          defaultValue={downtown}
-          onChange={value => setDowntown(value)}
-          name="points"
-          min="0"
-          max="5000"
-          step="500"
-        />
-        <p>{downtown} meters</p>
-        <br />
-        What are the maximum number of people you could share a flat with?
-        <input
-          type="range"
-          defaultValue={flatmates}
-          onChange={value => setFlatmates(value)}
-          name="points"
-          min="1"
-          max="116"
-          step="1"
-        />
-        <p>{flatmates} flatmates</p>
-        <br />
-        <Link to="/recommendation">
-          <button>Find my perfect flat!</button>
-        </Link>
-      </form>
+    <main className="surveyMain">
+      <div className="surveyContainer">
+        <h1>Survey</h1>
+        <div className="infoBox">
+          <div className="infosign">ℹ</div>️
+          <h3>The more sliders to the right, the more affordable it gets!</h3>
+        </div>
+        <form>
+          Max distance to night life:{' '}
+          <input
+            type="range"
+            defaultValue={nightlife}
+            name="points"
+            min="0"
+            max="5000"
+            step="500"
+          />
+          <p>{nightlife} meters</p>
+          <br />
+          Max distance to campus:{' '}
+          <input
+            type="range"
+            defaultValue={campus}
+            name="points"
+            min="0"
+            max="5000"
+            step="500"
+          />
+          <p>{campus} meters</p>
+          <br />
+          Max distance to Trondheim Torg (downtown):{' '}
+          <input
+            type="range"
+            defaultValue={downtown}
+            onChange={value => setDowntown(value)}
+            name="points"
+            min="0"
+            max="5000"
+            step="500"
+          />
+          <p>{downtown} meters</p>
+          <br />
+          What are the maximum number of people you could share a flat with?
+          <input
+            type="range"
+            defaultValue={flatmates}
+            onChange={value => setFlatmates(value)}
+            name="points"
+            min="1"
+            max="116"
+            step="1"
+          />
+          <p>{flatmates} flatmates</p>
+          <br />
+          <Link to="/recommendation">
+            <button className="findFlatButton">Find my perfect flat!</button>
+          </Link>
+        </form>
+      </div>
     </main>
   );
 };
