@@ -15,6 +15,7 @@ export const Application = () => {
         Given name: <input type="text" />
         <br />
         Family name: <input type="text" />
+        <br />
         <Link to="/">
           <button>Apply</button>
         </Link>
