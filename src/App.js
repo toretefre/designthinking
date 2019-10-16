@@ -5,6 +5,7 @@ import './App.css';
 const LandingPage = lazy(() => import('./containers/LandingPage'));
 const Survey = lazy(() => import('./containers/Survey'));
 const Recommendation = lazy(() => import('./containers/Recommendation'));
+const Application = lazy(() => import('./containers/Application'));
 
 export const App = () => {
   return (
@@ -13,6 +14,7 @@ export const App = () => {
         <LandingPage path="/" />
         <Survey path="/survey" />
         <Recommendation path="/recommendation" />
+        <Application path="/application" />
       </Router>
     </Suspense>
   );

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from '@reach/router';
 
 export const Recommendation = () => {
+  const [housing, setHousing] = useState('Lerkendal Student Village');
+
   return (
     <main>
-      <h1>You should stay at Lerkendal Student Village</h1>
+      <h1>You should stay at {housing}</h1>
       <section>
         <h2>Close to campus, night life, and affordable.</h2>
         <img
@@ -15,6 +17,9 @@ export const Recommendation = () => {
 
       <Link to="/survey">
         <button>Find me some other flat!</button>
+      </Link>
+      <Link to="/application">
+        <button>Apply for {housing}</button>
       </Link>
     </main>
   );

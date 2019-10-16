@@ -2,12 +2,10 @@ import React, { useState } from 'react';
 import { Link } from '@reach/router';
 
 export const Survey = () => {
-  const [distances, setDistances] = useState({
-    nightlife: 2000,
-    campus: 2000,
-    downtown: 2000,
-    flatmates: 115
-  });
+  const [nightlife, setNightlife] = useState(2000);
+  const [campus, setCampus] = useState(2000);
+  const [downtown, setDowntown] = useState(2000);
+  const [flatmates, setFlatmates] = useState(115);
 
   return (
     <main>
@@ -17,46 +15,48 @@ export const Survey = () => {
         Max distance to night life:{' '}
         <input
           type="range"
-          value={distances.nightlife}
+          defaultValue={nightlife}
           name="points"
           min="0"
           max="5000"
           step="500"
         />
-        <p>{distances.nightlife} meters</p>
+        <p>{nightlife} meters</p>
         <br />
         Max distance to campus:{' '}
         <input
           type="range"
-          value={distances.campus}
+          defaultValue={campus}
           name="points"
           min="0"
           max="5000"
           step="500"
         />
-        <p>{distances.campus} meters</p>
+        <p>{campus} meters</p>
         <br />
         Max distance to Trondheim Torg (downtown):{' '}
         <input
           type="range"
-          value={distances.downtown}
+          defaultValue={downtown}
+          onChange={value => setDowntown(value)}
           name="points"
           min="0"
           max="5000"
           step="500"
         />
-        <p>{distances.downtown} meters</p>
+        <p>{downtown} meters</p>
         <br />
         What are the maximum number of people you could share a flat with?
         <input
           type="range"
-          value={distances.flatmates}
+          defaultValue={flatmates}
+          onChange={value => setFlatmates(value)}
           name="points"
           min="1"
           max="116"
           step="1"
         />
-        <p>{distances.flatmates} flatmates</p>
+        <p>{flatmates} flatmates</p>
         <br />
         <Link to="/recommendation">
           <button>Find my perfect flat!</button>
