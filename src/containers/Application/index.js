@@ -10,19 +10,11 @@ export const Application = () => {
   return (
     <main>
       <h1>Application</h1>
-      <h2>The more sliders to the right, the more affordable it gets!</h2>
+      <h2>Please enter your personal information!</h2>
       <form>
-        Max distance to night life:{' '}
-        <input
-          type="range"
-          defaultValue={nightlife}
-          name="points"
-          min="0"
-          max="5000"
-          step="500"
-        />
-        <p>{nightlife} meters</p>
-        <Link to="http://www.ntnu.no/">
+        Given name: <input type="text" />
+        Family name: <input type="text" />
+        <Link to="/">
           <button>Apply</button>
         </Link>
       </form>
