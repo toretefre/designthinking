@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { Router } from '@reach/router';
 import './App.css';
+import Header from './components/Header';
 
 const LandingPage = lazy(() => import('./containers/LandingPage'));
 const Survey = lazy(() => import('./containers/Survey'));
@@ -11,13 +12,16 @@ const Confirmation = lazy(() => import('./containers/Confirmation'));
 export const App = () => {
   return (
     <Suspense fallback={<h1>Loading...</h1>}>
-      <Router>
-        <LandingPage path="/" />
-        <Survey path="/survey" />
-        <Recommendation path="/recommendation" />
-        <Application path="/application" />
-        <Confirmation path="/confirmation" />
-      </Router>
+      <Header />
+      <main>
+        <Router>
+          <LandingPage path="/" />
+          <Survey path="/survey" />
+          <Recommendation path="/recommendation" />
+          <Application path="/application" />
+          <Confirmation path="/confirmation" />
+        </Router>
+      </main>
     </Suspense>
   );
 };
