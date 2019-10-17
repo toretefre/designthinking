@@ -11,18 +11,20 @@ const Confirmation = lazy(() => import('./containers/Confirmation'));
 
 export const App = () => {
   return (
-    <Suspense fallback={<h1>Loading...</h1>}>
-      <Header />
-      <main>
-        <Router>
-          <LandingPage path="/" />
-          <Survey path="/survey" />
-          <Recommendation path="/recommendation" />
-          <Application path="/application" />
-          <Confirmation path="/confirmation" />
-        </Router>
-      </main>
-    </Suspense>
+    <wrapper>
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <Header />
+        <main>
+          <Router>
+            <LandingPage path="/" />
+            <Survey path="/survey" />
+            <Recommendation path="/recommendation" />
+            <Application path="/application" />
+            <Confirmation path="/confirmation" />
+          </Router>
+        </main>
+      </Suspense>
+    </wrapper>
   );
 };
 
